@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { createContainer } from 'meteor/react-meteor-data';
+import { withTracker } from 'meteor/react-meteor-data';
 
 export const NoteListHeader = (props) => {
   return(
@@ -12,8 +12,8 @@ export const NoteListHeader = (props) => {
   );
 }
 
-export default createContainer(() => {
+export default withTracker(() => {
   return {
     meteorCall: Meteor.call
   }
-}, NoteListHeader);
+})(NoteListHeader);

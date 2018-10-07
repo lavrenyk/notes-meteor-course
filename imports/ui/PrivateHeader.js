@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Accounts } from 'meteor/accounts-base';
 
 const PrivateHeader = (props) => {
@@ -15,7 +16,7 @@ const PrivateHeader = (props) => {
 } 
 
 PrivateHeader.propTypes = {
-  title : React.PropTypes.string.isRequired
+  title : PropTypes.string.isRequired
 }
 
 export default PrivateHeader;

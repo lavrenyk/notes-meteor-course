@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
-import { createContainer } from 'meteor/react-meteor-data';
+import { withTracker } from 'meteor/react-meteor-data';
 import { Session } from 'meteor/session';
 
 import { Notes } from '../api/notes';
@@ -22,10 +23,10 @@ export const NoteList = (props) => {
 }
 
 NoteList.propTypes = {
-  notes: React.PropTypes.array.isRequired
+  notes: PropTypes.array.isRequired
 }
 
-export default createContainer(() => {
+export default withTracker(() => {
   const selectedNoteIt = Session.get('selectedNoteId');
 
   Meteor.subscribe('notes');
@@ -38,4 +39,4 @@ export default createContainer(() => {
       };
     })
   };
-}, NoteList);
+})(NoteList);
