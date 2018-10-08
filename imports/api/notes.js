@@ -61,7 +61,7 @@ Meteor.methods({
       ...updates
     });
 
-    Note.update({
+    Notes.update({
       _id,
       userId: this.userId
     }, {
