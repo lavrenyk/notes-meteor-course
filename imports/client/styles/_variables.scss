@@ -1,12 +1,16 @@
 // Colors
-$brand-primary: #5b4681;
+$brand-primary: #397ab1;
 $grey: #dddddd;
 $light-gray: #f9f9f9;
 $dark-gray: #777777;
 
+// Body
+$body-background-color: #fafafa;
+$body-default-color: #333333;
+
 // Spacing
 $space: 1.4rem;
-$site-max-width: 50rem;
+$site-max-width: 100rem;
 
 // Font sizes
 $base-font-size: 1.4rem;
@@ -18,9 +22,10 @@ $input-border: $grey;
 // Boxed view
 $boxed-view-overlay-bg: $grey;
 $boxed-view-bg: white;
+$boxed-view-border: $grey;
 
 // Button
-$button-bg: #5b4681;
+$button-bg: $brand-primary;
 $button-text-color: white;
 $button-pill-color: $brand-primary;
 $button-secondary-bg: $light-gray;
@@ -30,8 +35,14 @@ $button-border-color: $grey;
 // Header
 $header-bg: $brand-primary;
 $header-text-color: white;
+$header-height: 6rem;
 
 // Item
 $item-bg: $light-gray;
 $item-border: darken($item-bg, 10%);
 $item-text-color: $dark-gray;
+
+// Page Content
+$page-content-sidebar-width: 30rem;
+$page-content-main-width: calc(#{$site-max-width} - #{$page-content-sidebar-width});
+$page-content-height: calc(100vh - #{$header-height});
