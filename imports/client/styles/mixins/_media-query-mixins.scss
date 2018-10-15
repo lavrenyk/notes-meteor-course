@@ -1,0 +1,5 @@
+@mixin desctop() {
+  @media(min-width: 50rem) {
+      @content;
+  } 
+}
